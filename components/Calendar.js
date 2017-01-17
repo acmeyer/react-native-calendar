@@ -23,6 +23,7 @@ export default class Calendar extends Component {
   };
 
   static propTypes = {
+    currentMonth: PropTypes.any,
     customStyle: PropTypes.object,
     dayHeadings: PropTypes.array,
     eventDates: PropTypes.array,
@@ -80,6 +81,9 @@ export default class Calendar extends Component {
   componentWillReceiveProps(props) {
     if (props.selectedDate) {
       this.setState({selectedMoment: props.selectedDate});
+    }
+    if (props.currentMonth) {
+      this.setState({currentMonthMoment: moment(props.currentMonth)});
     }
   }
 
