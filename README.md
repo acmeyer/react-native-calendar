@@ -11,6 +11,7 @@ Portrait mode only
 ## Usage
 ```javascript
 <Calendar
+  currentMonth={'2015-08-01'}       // Optional date to set the currently displayed month after initialization
   customStyle={{day: {fontSize: 15, textAlign: 'center'}}} // Customize any pre-defined styles
   dayHeadings={Array}               // Default: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
   eventDates={['2015-07-01']}       // Optional array of moment() parseable dates that will show an event indicator
@@ -29,7 +30,7 @@ Portrait mode only
   showEventIndicators={true}        // False hides event indicators. Default:False
   startDate={'2015-08-01'}          // The first month that will display. Default: current month
   titleFormat={'MMMM YYYY'}         // Format for displaying current month. Default: 'MMMM YYYY'
-  today={'2016-16-05'}              // Defaults to today
+  today={'2017-05-16'}              // Defaults to today
   weekStart={1} // Day on which week starts 0 - Sunday, 1 - Monday, 2 - Tuesday, etc, Default: 1
 />
 ```
