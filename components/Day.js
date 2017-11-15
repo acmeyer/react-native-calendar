@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import {
   Text,
   TouchableOpacity,
@@ -11,18 +11,6 @@ import styles from './styles';
 export default class Day extends Component {
   static defaultProps = {
     customStyle: {},
-  }
-
-  static propTypes = {
-    caption: PropTypes.any,
-    customStyle: PropTypes.object,
-    filler: PropTypes.bool,
-    event: PropTypes.object,
-    isSelected: PropTypes.bool,
-    isToday: PropTypes.bool,
-    isWeekend: PropTypes.bool,
-    onPress: PropTypes.func,
-    showEventIndicators: PropTypes.bool,
   }
 
   dayCircleStyle = (isWeekend, isSelected, isToday, event) => {

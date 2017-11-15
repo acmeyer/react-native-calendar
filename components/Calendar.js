@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import {
   Dimensions,
   ScrollView,
@@ -28,35 +28,6 @@ export default class Calendar extends Component {
     currentMonthMoment: moment(this.props.startDate),
     selectedMoment: moment(this.props.selectedDate),
     rowHeight: null,
-  };
-
-  static propTypes = {
-    currentMonth: PropTypes.any,
-    customStyle: PropTypes.object,
-    dayHeadings: PropTypes.array,
-    eventDates: PropTypes.array,
-    monthNames: PropTypes.array,
-    nextButtonText: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.object
-    ]),
-    onDateSelect: PropTypes.func,
-    onSwipeNext: PropTypes.func,
-    onSwipePrev: PropTypes.func,
-    onTouchNext: PropTypes.func,
-    onTouchPrev: PropTypes.func,
-    prevButtonText: PropTypes.oneOfType([
-      PropTypes.string,
-      PropTypes.object
-    ]),
-    scrollEnabled: PropTypes.bool,
-    selectedDate: PropTypes.any,
-    showControls: PropTypes.bool,
-    showEventIndicators: PropTypes.bool,
-    startDate: PropTypes.any,
-    titleFormat: PropTypes.string,
-    today: PropTypes.any,
-    weekStart: PropTypes.number,
   };
 
   static defaultProps = {
