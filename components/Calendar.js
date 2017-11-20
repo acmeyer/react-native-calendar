@@ -64,7 +64,7 @@ export default class Calendar extends Component {
       this.setState({currentMonthMoment: moment(nextProps.currentMonth)});
     }
     if (this.props.currentMonth) {
-      this.setState({currentMonthMoment: moment(props.currentMonth)});
+      this.setState({currentMonthMoment: moment(this.props.currentMonth)});
     }
   }
 
