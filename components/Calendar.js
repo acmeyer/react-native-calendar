@@ -45,6 +45,7 @@ export default class Calendar extends Component {
     startDate: moment().format('YYYY-MM-DD'),
     titleFormat: 'MMMM YYYY',
     weekStart: 1,
+    allowFontScaling: true,
   };
 
   componentDidMount() {
@@ -188,6 +189,7 @@ export default class Calendar extends Component {
             event={events && events[dayIndex]}
             showEventIndicators={this.props.showEventIndicators}
             customStyle={this.props.customStyle}
+            allowFontScaling={this.props.allowFontScaling}
           />
         ));
       } else {
@@ -223,6 +225,7 @@ export default class Calendar extends Component {
           style={j === 0 || j === 6 ?
             [styles.weekendHeading, this.props.customStyle.weekendHeading] :
             [styles.dayHeading, this.props.customStyle.dayHeading]}
+          allowFontScaling={this.props.allowFontScaling}
         >
           {this.props.dayHeadings[j]}
         </Text>
@@ -245,18 +248,18 @@ export default class Calendar extends Component {
             style={[styles.controlButton, this.props.customStyle.controlButton]}
             onPress={this.onPrev}
           >
-            <Text style={[styles.controlButtonText, this.props.customStyle.controlButtonText]}>
+            <Text allowFontScaling={this.props.allowFontScaling} style={[styles.controlButtonText, this.props.customStyle.controlButtonText]}>
               {this.props.prevButtonText}
             </Text>
           </TouchableOpacity>
-          <Text style={[styles.title, this.props.customStyle.title]}>
+          <Text allowFontScaling={this.props.allowFontScaling} style={[styles.title, this.props.customStyle.title]}>
             {this.state.currentMonthMoment.format(this.props.titleFormat)}
           </Text>
           <TouchableOpacity
             style={[styles.controlButton, this.props.customStyle.controlButton]}
             onPress={this.onNext}
           >
-            <Text style={[styles.controlButtonText, this.props.customStyle.controlButtonText]}>
+            <Text allowFontScaling={this.props.allowFontScaling} style={[styles.controlButtonText, this.props.customStyle.controlButtonText]}>
               {this.props.nextButtonText}
             </Text>
           </TouchableOpacity>
@@ -264,7 +267,7 @@ export default class Calendar extends Component {
       )
     : (
       <View style={[styles.calendarControls, this.props.customStyle.calendarControls]}>
-        <Text style={[styles.title, this.props.customStyle.title]}>
+        <Text allowFontScaling={this.props.allowFontScaling} style={[styles.title, this.props.customStyle.title]}>
           {this.state.currentMonthMoment.format(this.props.titleFormat)}
         </Text>
       </View>
